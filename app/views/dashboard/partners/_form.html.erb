@@ -1,0 +1,42 @@
+<%= form_with(model: dashboard_partner, local: true) do |form| %>
+  <% if dashboard_partner.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dashboard_partner.errors.count, "error") %> prohibited this dashboard_partner from being saved:</h2>
+
+      <ul>
+      <% dashboard_partner.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :logo %>
+    <%= form.text_field :logo, id: :dashboard_partner_logo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :dashboard_partner_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :dashboard_partner_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :link %>
+    <%= form.text_field :link, id: :dashboard_partner_link %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tags %>
+    <%= form.text_field :tags, id: :dashboard_partner_tags %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

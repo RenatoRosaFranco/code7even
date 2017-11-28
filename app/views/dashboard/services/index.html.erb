@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dashboard Services</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Tags</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dashboard_services.each do |dashboard_service| %>
+      <tr>
+        <td><%= dashboard_service.name %></td>
+        <td><%= dashboard_service.description %></td>
+        <td><%= dashboard_service.tags %></td>
+        <td><%= link_to 'Show', dashboard_service %></td>
+        <td><%= link_to 'Edit', edit_dashboard_service_path(dashboard_service) %></td>
+        <td><%= link_to 'Destroy', dashboard_service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dashboard Service', new_dashboard_service_path %>

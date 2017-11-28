@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dashboard Categories</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Tags</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dashboard_categories.each do |dashboard_category| %>
+      <tr>
+        <td><%= dashboard_category.name %></td>
+        <td><%= dashboard_category.description %></td>
+        <td><%= dashboard_category.tags %></td>
+        <td><%= link_to 'Show', dashboard_category %></td>
+        <td><%= link_to 'Edit', edit_dashboard_category_path(dashboard_category) %></td>
+        <td><%= link_to 'Destroy', dashboard_category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dashboard Category', new_dashboard_category_path %>

@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Logo:</strong>
+  <%= @dashboard_partner.logo %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dashboard_partner.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dashboard_partner.description %>
+</p>
+
+<p>
+  <strong>Link:</strong>
+  <%= @dashboard_partner.link %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @dashboard_partner.tags %>
+</p>
+
+<%= link_to 'Edit', edit_dashboard_partner_path(@dashboard_partner) %> |
+<%= link_to 'Back', dashboard_partners_path %>

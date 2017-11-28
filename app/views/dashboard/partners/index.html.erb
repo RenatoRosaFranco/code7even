@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dashboard Partners</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Logo</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Link</th>
+      <th>Tags</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dashboard_partners.each do |dashboard_partner| %>
+      <tr>
+        <td><%= dashboard_partner.logo %></td>
+        <td><%= dashboard_partner.name %></td>
+        <td><%= dashboard_partner.description %></td>
+        <td><%= dashboard_partner.link %></td>
+        <td><%= dashboard_partner.tags %></td>
+        <td><%= link_to 'Show', dashboard_partner %></td>
+        <td><%= link_to 'Edit', edit_dashboard_partner_path(dashboard_partner) %></td>
+        <td><%= link_to 'Destroy', dashboard_partner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dashboard Partner', new_dashboard_partner_path %>

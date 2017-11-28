@@ -1,0 +1,52 @@
+<%= form_with(model: dashboard_member, local: true) do |form| %>
+  <% if dashboard_member.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dashboard_member.errors.count, "error") %> prohibited this dashboard_member from being saved:</h2>
+
+      <ul>
+      <% dashboard_member.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :avatar %>
+    <%= form.text_field :avatar, id: :dashboard_member_avatar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :dashboard_member_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description, id: :dashboard_member_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :occupation %>
+    <%= form.text_field :occupation, id: :dashboard_member_occupation %>
+  </div>
+
+  <div class="field">
+    <%= form.label :facebook %>
+    <%= form.text_field :facebook, id: :dashboard_member_facebook %>
+  </div>
+
+  <div class="field">
+    <%= form.label :twitter %>
+    <%= form.text_field :twitter, id: :dashboard_member_twitter %>
+  </div>
+
+  <div class="field">
+    <%= form.label :linkedin %>
+    <%= form.text_field :linkedin, id: :dashboard_member_linkedin %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

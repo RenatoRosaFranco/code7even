@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dashboard Members</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Avatar</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Occupation</th>
+      <th>Facebook</th>
+      <th>Twitter</th>
+      <th>Linkedin</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dashboard_members.each do |dashboard_member| %>
+      <tr>
+        <td><%= dashboard_member.avatar %></td>
+        <td><%= dashboard_member.name %></td>
+        <td><%= dashboard_member.description %></td>
+        <td><%= dashboard_member.occupation %></td>
+        <td><%= dashboard_member.facebook %></td>
+        <td><%= dashboard_member.twitter %></td>
+        <td><%= dashboard_member.linkedin %></td>
+        <td><%= link_to 'Show', dashboard_member %></td>
+        <td><%= link_to 'Edit', edit_dashboard_member_path(dashboard_member) %></td>
+        <td><%= link_to 'Destroy', dashboard_member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dashboard Member', new_dashboard_member_path %>

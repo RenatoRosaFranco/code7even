@@ -1,0 +1,32 @@
+<%= form_with(model: dashboard_service, local: true) do |form| %>
+  <% if dashboard_service.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(dashboard_service.errors.count, "error") %> prohibited this dashboard_service from being saved:</h2>
+
+      <ul>
+      <% dashboard_service.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :dashboard_service_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_field :description, id: :dashboard_service_description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tags %>
+    <%= form.text_field :tags, id: :dashboard_service_tags %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

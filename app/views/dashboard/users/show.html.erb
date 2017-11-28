@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @dashboard_user.avatar %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dashboard_user.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @dashboard_user.email %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @dashboard_user.password %>
+</p>
+
+<p>
+  <strong>Password confirmation:</strong>
+  <%= @dashboard_user.password_confirmation %>
+</p>
+
+<%= link_to 'Edit', edit_dashboard_user_path(@dashboard_user) %> |
+<%= link_to 'Back', dashboard_users_path %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dashboard_service.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dashboard_service.description %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @dashboard_service.tags %>
+</p>
+
+<%= link_to 'Edit', edit_dashboard_service_path(@dashboard_service) %> |
+<%= link_to 'Back', dashboard_services_path %>

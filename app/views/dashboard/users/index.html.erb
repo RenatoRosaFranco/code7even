@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Dashboard Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Avatar</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>Password confirmation</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @dashboard_users.each do |dashboard_user| %>
+      <tr>
+        <td><%= dashboard_user.avatar %></td>
+        <td><%= dashboard_user.name %></td>
+        <td><%= dashboard_user.email %></td>
+        <td><%= dashboard_user.password %></td>
+        <td><%= dashboard_user.password_confirmation %></td>
+        <td><%= link_to 'Show', dashboard_user %></td>
+        <td><%= link_to 'Edit', edit_dashboard_user_path(dashboard_user) %></td>
+        <td><%= link_to 'Destroy', dashboard_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Dashboard User', new_dashboard_user_path %>

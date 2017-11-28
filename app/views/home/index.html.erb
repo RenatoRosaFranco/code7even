@@ -1,0 +1,155 @@
+<%= provide :title, "Home" %>
+
+<%= render partial: 'layouts/header' %>
+
+<section id='presenter' class='jumbotron'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class='list-unstyled text-center'>
+          <li><h1>CODE7EVEN</h1></li>
+          <li><p>código rápido e eficaz para seu negócio.</p></li>
+          <ul class='list-unstyled list-inline'>
+            <li><%= link_to 'SERVIÇOS', '', class: 'btn btn-primary btn-lg top' %></li>
+            <li><%= link_to 'CONTATO', '', class: 'btn btn-primary btn-lg top' %></li>
+          </ul>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id='presenter'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+          <% if success %>
+              <p class='alert alert-success'><%= success %></p>
+          <% end %>
+
+          <ul class='list-unstyled'>
+             <li><h1><i class='glypicon glyphicon-search'></i> EMPRESA</h1></li>
+             <li><p>Conheça um pouco de nossa empresa.</p></li>
+             <li><hr></li>
+          </ul>
+
+          <p>A CODE7EVEN surgiu de uma startup facultativa, no inicio era apenas
+          um projeto de agencia digital, hoje tornou-se uma software house que propõem
+          a seus clientes as melhores soluções no campo da tecnologia a um preço acessivel.
+          Não nos limitando apenas ao atendimento a clientes locais, também atendemos clients
+          no exterior, nossas soluções são implementadas atráves da agilidade, qualidade e
+          praticidade assim propondo a nossos clientes um serviço confiavel e transparente. </p>
+
+          <div class="col-md-12">
+            <div class="col-md-4">
+              <ul class='list-unstyled text-center'>
+                <li><h3>COMPROMISSO<h3></li>
+                <li><p>Temos compromisso com os ideais de nossos
+                clientes, nos comunicando com os mesmos de maneira
+                integra e honesta.</p></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class='list-unstyled text-center'>
+                <li><h3>INOVAÇÃO</h3></li>
+                <li><p>Temos como objetivo principal a inovação no ramo
+                da tecnologia, nossa filosofia e tornar o mundo um lugar
+                melhor para as pessoas atráves da mesma.</p></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class="list-unstyled text-center">
+                <li><h3>TRABALHO EM EQUIPE</h3></li>
+                <li><p>Temos uma equipe totalmente qualificada tabalhando
+                em conjunto para criar soluções eficazes para nossos
+                clientes.</p></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class='list-unstyled text-center'>
+                <li><h3>SOCIEDADE</h3></li>
+                <li><p>Temos o prazer de patrocinar, dar suporte ou apoiar
+                eventos sociais que tenham como meta o crescimento
+                intelectual e cultural.</p></li>
+              </ul>
+            </div>
+            <div class="col-md-4">
+              <ul class='list-unstyled text-center'>
+                <li><h3>EDUCAÇÃO & FORMAÇÃO</h3></li>
+                <li><p>Encorajamos e apoiamos os nossos colaboradores a
+                se qualificarem cada vez mais, assim aprimorando as
+                nossas soluções.</p></li>
+              </ul>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id='member'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class='list-unstyled text-center'>
+          <li><h3>EQUIPE</h3></li>
+          <li><p>Temos uma equipe totalmente qualificada para lhe atender
+          independente de sua necessidade, nossos colaboradores, qualidade
+          e excelência no serviço prestado. Venha conhecer um pouco mais
+          sobre nossa equipe.</p></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id='solution'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+         <ul class='list-unstyled'>
+            <li><h3>SOLUÇÕES</h3></li>
+            <li><p>Temos a solução ideal para seus problemas, e com preços
+            totalmente acessiveis, escolha a solução que mais se enquadra
+            a seu tipo de problema.</p></li>
+         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id='new'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <ul class='list-unstyled'>
+          <li><h3>NOTICIAS</h3></li>
+          <li><p>Fique por dentro de nossas ultimas noticias, se prefirir
+          pode assinar a nossa newsletter e enviaremos para você um e-mail de
+          notificação sempre que noticias novas forem publicadas.</p></li>
+        </ul>
+
+        <%= render partial: 'newsletter/form' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id='contact'>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+         <ul class='list-unstyled text-center'>
+           <li><h1>CONTATO</h1></li>
+           <li><p>Envie-nos sua mensagem, responderemos o mais rápido possivel.</p></li>
+           <li><hr></li>
+         </ul>
+         <%= render partial: 'contact/form' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+<%= render partial: 'layouts/footer' %>

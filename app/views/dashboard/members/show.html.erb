@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Avatar:</strong>
+  <%= @dashboard_member.avatar %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @dashboard_member.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @dashboard_member.description %>
+</p>
+
+<p>
+  <strong>Occupation:</strong>
+  <%= @dashboard_member.occupation %>
+</p>
+
+<p>
+  <strong>Facebook:</strong>
+  <%= @dashboard_member.facebook %>
+</p>
+
+<p>
+  <strong>Twitter:</strong>
+  <%= @dashboard_member.twitter %>
+</p>
+
+<p>
+  <strong>Linkedin:</strong>
+  <%= @dashboard_member.linkedin %>
+</p>
+
+<%= link_to 'Edit', edit_dashboard_member_path(@dashboard_member) %> |
+<%= link_to 'Back', dashboard_members_path %>
