@@ -1,4 +1,6 @@
 class Service < ApplicationRecord
+  include Filterable
+  
   self.table_name = 'services'
   self.primary_key = 'id'
   belongs_to :user

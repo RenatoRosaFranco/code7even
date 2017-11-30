@@ -5,6 +5,10 @@ class Partner < ApplicationRecord
   belongs_to :user
   mount_uploader :logo, FileUploader
 
+  validates :logo,
+            uniqueness: false,
+            format: {with: /^\.(bmp|png|jpg|jpeg)/}
+
   validates :name,
             presence: true,
             uniqueness: false,

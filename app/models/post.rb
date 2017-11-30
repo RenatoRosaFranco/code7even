@@ -1,4 +1,6 @@
 class Post < ApplicationRecord
+  include Filterable
+  
   self.table_name = 'posts'
   self.primary_key = 'id'
 

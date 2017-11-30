@@ -1,4 +1,6 @@
 class Member < ApplicationRecord
+  include Filterable
+  
   self.table_name = 'members'
   self.primary_key = 'id'
 

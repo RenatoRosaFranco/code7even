@@ -1,4 +1,6 @@
 class Newsletter < ApplicationRecord
+  include Filterable
+  
   self.table_name = 'newsletters'
   self.primary_key = 'id'
 
